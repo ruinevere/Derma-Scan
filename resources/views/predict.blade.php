@@ -65,6 +65,75 @@
         #carouselExampleCaptions {
         margin-top: 0 !important;
     }
+    .instruction-container {
+        width: 100%;
+        height: 100%; 
+        margin: 0; 
+        background:rgb(255, 255, 255); 
+        /* background: linear-gradient(to bottom,rgb(37, 102, 142), #00c6ff); */
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none; 
+        display: flex; 
+        flex-direction: column; 
+
+}
+
+        .instruction-container h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+        .instruction-container h3 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 60px;
+            margin-top: 20px;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-top:20px;
+            margin-bottom: 20px;
+            margin-left:380px;
+        }
+        .step-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+            /* background-color:rgb(255, 255, 255); */
+            /* background: linear-gradient(to bottom,rgb(37, 102, 142), #00c6ff); */
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            margin-right: 15px;
+        }
+        .step-content {
+            flex-grow: 1;
+        }
+        .step-content h4 {
+            margin: 0 0 5px;
+            color:rgb(8, 9, 10);
+        }
+        .step-content p {
+            margin: 0;
+            color: #555;
+        }
+        .example-image {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .example-image img {
+            width: 30%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
 
 
 
@@ -154,6 +223,47 @@ footer {
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+<div class="instruction-container">
+        <h1>How to Take a Skin Photo</h1>
+        
+        <div class="step">
+            <div class="step-icon">1</div>
+            <div class="step-content">
+                <h4>Good Lighting</h4>
+                <p>Take the photo in a well-lit environment to avoid shadows or overexposure. Natural daylight is ideal.</p>
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-icon">2</div>
+            <div class="step-content">
+                <h4>Focus on the Affected Area</h4>
+                <p>Ensure the affected skin area is clearly visible and in focus. Avoid blurriness.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-icon">3</div>
+            <div class="step-content">
+                <h4>Remove Obstructions</h4>
+                <p>Remove any makeup, jewelry, or other objects that may cover the skin.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-icon">4</div>
+            <div class="step-content">
+                <h4>Neutral Background</h4>
+                <p>Take the photo against a plain background, such as a white or light-colored wall.</p>
+            </div>
+        </div>
+
+        <div class="example-image">
+            <h5>Example of a Good Photo:</h5>
+            <img src="{{ asset('image/example.jpg') }}" alt="Example of Good Skin Photo">
+        </div>
+    </div>
 
 <!-- Main Container -->
 <div class="container mt-5">
