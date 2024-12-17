@@ -23,7 +23,9 @@ COPY . /app
 # Install PHP dependencies without scripts or dev dependencies
 RUN composer install --no-dev --optimize-autoloader --no-scripts && \
     php artisan config:clear && \
-    php artisan optimize:clear
+    php artisan optimize:clear && \
+    php artisan package:discover
+
 
 # Expose port 8000
 EXPOSE 8000

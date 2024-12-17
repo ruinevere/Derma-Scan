@@ -53,12 +53,11 @@
     },
 "extra": {
     "laravel": {
-        "dont-discover": [
-            "laravel/tinker",
-            "other/package-to-skip"
-        ]
+        "dont-discover": "*"
     }
-},
+}
+
+,
 
     "config": {
         "optimize-autoloader": true,
