@@ -4,15 +4,18 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 from PIL import Image
 import numpy as np
+import os
 import io
 
 
 # Initialize Flask app
 app = Flask(__name__)
 
+# Dynamically load the model from the current directory
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, 'skin_disease_model.h5')
 
 # Load the pre-trained model
-MODEL_PATH = r'C:\Users\rebeccca\skin_cancer_env\Dataset\skin_disease_model.h5'
 model = load_model(MODEL_PATH)
 
 # Class labels (update according to your model’s output)
@@ -20,8 +23,6 @@ LABELS = ['Acne and Rosacea', 'Actinic Keratosis', 'Melanoma']
 
 # Define the image size expected by the model
 IMG_SIZE = (224, 224)
-
-
 
 @app.route('/predict', methods=['POST'])
 def predict():
